@@ -6,6 +6,6 @@ import random
 
 @app.route("/position", methods=["GET"])
 def position():
-    positions = ["Goalkeeper", "Right-Back", "Centreback", "Left-Back", "Centre Defensive Midfielder", "Centre Attacking Midfielder", "Left Winger", "Right Winger"]
+    positions = ["Goalkeeper", "Defender", "Midfielder", "Striker"]
     rposition= random.choice(positions)
     return Response(str(rposition), mimetype="text/plain")
