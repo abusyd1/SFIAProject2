@@ -1,0 +1,20 @@
+version: '1.0'
+services:
+  service1:
+    container_name: "generator_service1"
+    image: abusyd1/service1:${app_version}
+    build: ./service1
+    ports:
+    - target: 5000
+      published: 80
+      protocol: tcp
+    environment:
+      DATABASE_URI: ${DATABASE_URI}
+    deploy:
+      replicas: 3
+  service2:
+    container_name: "generator_service2"
+    image: abusyd1/service2:${app_version}
+    build: ./service2
+    deploy:
+      replicas: 3
