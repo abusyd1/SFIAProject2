@@ -8,7 +8,7 @@ services:
       published: 80
       protocol: tcp
     environment:
-      DATABASE_URI: "mysql+pymysql://root:root@localhost/Project22"
+      SQLALCHEMY_DATABASE_URI: "mysql+pymysql://root:root@localhost/Project2"
     deploy:
       replicas: 3
   service2:
