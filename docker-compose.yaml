@@ -1,14 +1,26 @@
-version: '3.7'
+version: '3.3'
 services:
+  database:
+    image: mysql:5.7
+    container_name: mysql_container
+    environment:
+    - MYSQL_ROOT_PASSWORD=root
+    - MYSQL_DATABASE=flask-db
+    ports:
+    - target: 3306
+      published: 3306
+      protocol: tcp
+    volumes:
+    - type: volume
+      source: db-data
+      target: /var/lib/mysql
   service1:
     container_name: "generator_service1"
     build: ./service1
     ports:
     - target: 5000
-      published: 80
+      published: 5000
       protocol: tcp
-    environment:
-      SQLALCHEMY_DATABASE_URI: "mysql+pymysql://root:root@localhost/Project2"
     deploy:
       replicas: 3
   service2:
@@ -16,3 +28,5 @@ services:
     build: ./service2
     deploy:
       replicas: 3
+volumes:
+    db-data:
