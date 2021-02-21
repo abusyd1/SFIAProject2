@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS Players
+CREATE TABLE IF NOT EXISTS Player
              (
                           id         INTEGER NOT NULL,
                           Player_position VARCHAR(30) NOT NULL,

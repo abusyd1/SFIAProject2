@@ -1,8 +1,9 @@
-version: '3.3'
+version: '3.7'
 services:
   database:
-    image: mysql:5.7
     container_name: mysql_container
+    image: abusyd1/data-db:latest
+    build: ./db
     environment:
     - MYSQL_ROOT_PASSWORD=root
     - MYSQL_DATABASE=flask-db
@@ -14,6 +15,7 @@ services:
     - type: volume
       source: db-data
       target: /var/lib/mysql
+
   service1:
     container_name: "generator_service1"
     build: ./service1
@@ -28,5 +30,15 @@ services:
     build: ./service2
     deploy:
       replicas: 3
+  nginx:
+    image: nginx:latest
+    ports:
+    - target: 80
+      published: 80
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: ./nginx/nginx.conf
+      target: /etc/nginx/nginx.conf
 volumes:
     db-data:
