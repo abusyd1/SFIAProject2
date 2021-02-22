@@ -1,20 +1,5 @@
 version: '3.7'
 services:
-  database:
-    container_name: mysql_container
-    image: abusyd1/data-db:latest
-    environment:
-    - MYSQL_ROOT_PASSWORD=root
-    - MYSQL_DATABASE=flask-db
-    ports:
-    - target: 3306
-      published: 3306
-      protocol: tcp
-    volumes:
-    - type: volume
-      source: db-data
-      target: /var/lib/mysql
-
   service1:
     container_name: "generator_service1"
     image: abusyd1/service1:latest
@@ -29,19 +14,29 @@ services:
     container_name: "generator_service2"
     image: abusyd1/service2:latest
     build: ./service2
+    ports:
+    - target: 5001
+      published: 5001
+      protocol: tcp
     deploy:
       replicas: 3
   service3:
     container_name: "generator_service3"
     image: abusyd1/service3:latest
     build: ./service3
+    ports: 
+    - target: 5002
+      published: 5002
+      protocol: tcp
     deploy:
       replicas: 3
   service4:
     container_name: "generator_service4"
     image: abusyd1/service4:latest
     build: ./service4
+    ports:
+    - target: 5003
+      published: 5003
+      protocol: tcp
     deploy:
       replicas: 3
-volumes:
-    db-data:
