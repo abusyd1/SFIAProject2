@@ -10,9 +10,9 @@ from sqlalchemy import desc
 
 @app.route('/')
 def index():
-    position1 = requests.get("http://generator_service2:5000/position")
-    nationality1 = request.get("http://generator_service3:5000/nationality")
-    profile = request.get("generator_service4:5000/profile", json={"position2":position1.text, "nationality2":nationality1.text
+    position1 = requests.get("http://generator_service2:5001/position")
+    nationality1 = request.get("http://generator_service3:5002/nationality")
+    profile = request.get("generator_service4:5003/profile", json={"position2":position1.text, "nationality2":nationality1.text})
     play=Player.query.order_by(desc("Id")).limit(5).all()
     maxno=Player.query.order_by(desc("Id")).first()
     randno=random.randint(1,maxno.Id)
@@ -21,5 +21,5 @@ def index():
     db.session.add(new_player)
     db.session.commit()
     
-    return render_template("index.html", position=position1.text,nationality=nationality1.text, profile=profile.text play=play, randplay=randplay)
+    return render_template("index.html", position=position1.text,nationality=nationality1.text, profile=profile.text, play=play, randplay=randplay)
 
