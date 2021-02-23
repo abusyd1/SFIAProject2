@@ -12,7 +12,7 @@ from sqlalchemy import desc
 def index():
     position1 = requests.get("http://generator_service2:5001/position")
     nationality1 = requests.get("http://generator_service3:5002/nationality")
-    profile = requests.get("generator_service4:5003/profile", json={"position2":position1.text, "nationality2":nationality1.text})
+    profile = requests.get("http://generator_service4:5003/profile", json={"position2":position1.text, "nationality2":nationality1.text})
     play=Player.query.order_by(desc("Id")).limit(5).all()
     maxno=Player.query.order_by(desc("Id")).first()
     randno=random.randint(1,maxno.Id)
