@@ -9,11 +9,11 @@ def profile():
     desc= {"Goalkeeper":["Gigantic", "Sweeper-Keeper"], "Defender":["Real-Leader", "No-Nonsense"], "Midfielder":["Keen eye for a pass", "Dribbling master"], "Striker":["Poacher", "Rapid"]}
 
     play=request.get_json()
-    position1= play["class2"]
-    race= char["race2"]
-    a= ["Completely useless", "Super evil"]
-    a.extend(desc[class1])
-    a.extend(desc[race])
+    position1= play["position2"]
+    nationality= char["nationality2"]
+    a= ["Best in the world", "Mediocre, run-of-the-mill"]
+    a.extend(desc[position1])
+    a.extend(desc[nationality])
     b=random.choice(a)
 
     return Response(b, mimetype="text/plain")
