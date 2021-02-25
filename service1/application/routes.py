@@ -3,7 +3,7 @@
 
 from application import app, db
 from application.models import Player
-from flask import request, render_template, jsonify
+from flask import request, render_template
 import requests
 import random
 from sqlalchemy import desc
@@ -17,10 +17,7 @@ def index():
     info = str(position1.text) + "." + str(nationality1.text)
     profile = requests.post("http://generator_service4:5003/profile", data = info)
 
-   # play=Player.query.order_by(desc("Id")).limit(5).all()
-   # maxno=Player.query.order_by(desc("Id")).first()
-   # randno=random.randint(1,maxno.Id)
-   # randplay=Player.query.filter_by(Id=randno).all()
+  
    # new_player= Player(Player_position=position1.text, Player_nationality=nationality1.text, Player_profile=profile.text)
    # db.session.add(new_player)
    # db.session.commit()
