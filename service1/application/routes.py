@@ -8,11 +8,15 @@ import requests
 import random
 from sqlalchemy import desc
 
-@app.route('/')
+@app.route('/', methods = ['GET', 'POST'])
 def index():
     position1 = requests.get("http://generator_service2:5001/position")
+    string_position1 = position1.text
     nationality1 = requests.get("http://generator_service3:5002/nationality")
-    profile = requests.post("http://generator_service4:5003/profile", json={"position2":position1.text, "nationality2":nationality1.text})
+    string_nationality1 = nationality1.text
+    info = str(position1.text) + "." + str(nationality1.text)
+    profile = requests.post("http://generator_service4:5003/profile", data = info)
+
    # play=Player.query.order_by(desc("Id")).limit(5).all()
    # maxno=Player.query.order_by(desc("Id")).first()
    # randno=random.randint(1,maxno.Id)
@@ -21,5 +25,5 @@ def index():
    # db.session.add(new_player)
    # db.session.commit()
     
-    return render_template("index.html", position=position1.text,nationality=nationality1.text, profile=profile.text)
+    return render_template("index.html", position1=string_position1,nationality1=string_nationality1, info=info, profile=profile.text)
 
