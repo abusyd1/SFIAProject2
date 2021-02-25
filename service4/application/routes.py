@@ -12,10 +12,10 @@ def profile():
     nationality1 = data2[1]
     print(position1)
     print(nationality1)
-    keeper_profile = ['Towering', 'Sweeper']
-    defender_profile = ['No-Nonsense', 'Commanding']
-    midfielder_profile = ['Silky', 'All-Seeing']
-    striker_profile = ['Prolific', 'Poacher']
+    keeper_profile = ['Towering', 'Sweeper-Keeper', 'Rapid Reflexes']
+    defender_profile = ['Tactician', 'Commanding', 'Aerial Threat']
+    midfielder_profile = ['Silky', 'Eye for a Pass', 'Engine']
+    striker_profile = ['Prolific', 'Poacher', 'Speedster']
 
     if position1 == "Goalkeeper":
         profile = random.choice(keeper_profile)
