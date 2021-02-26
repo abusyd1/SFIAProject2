@@ -10,5 +10,4 @@ class Player(db.Model):
     Player_nationality=db.Column(db.String(30), nullable=False)
     Player_profile= db.Column(db.String(3000), nullable=False)
 
-    def __repr__(self):
-        return f"{self.Id} | {self.Player_position} | {self.Player_nationlity}| {self.Player_profile}"
+

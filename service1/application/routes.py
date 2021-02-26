@@ -6,7 +6,6 @@ from application.models import Player
 from flask import request, render_template
 import requests
 import random
-from sqlalchemy import desc
 
 @app.route('/', methods = ['GET', 'POST'])
 def index():
