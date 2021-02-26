@@ -18,9 +18,9 @@ def index():
     profile = requests.post("http://generator_service4:5003/profile", data = info)
 
   
-   # new_player= Player(Player_position=position1.text, Player_nationality=nationality1.text, Player_profile=profile.text)
-   # db.session.add(new_player)
-   # db.session.commit()
+    new_player= Player(Player_position=position1.text, Player_nationality=nationality1.text, Player_profile=profile.text)
+    db.session.add(new_player)
+    db.session.commit()
     
     return render_template("index.html", position1=string_position1,nationality1=string_nationality1, info=info, profile=profile.text)
 
