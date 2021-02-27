@@ -27,65 +27,65 @@ def profile():
 
     global profile
     if position1 == "Goalkeeper" and nationality1 == "English":
-        profile = random.choice(keeper_profile) + " and plays for " + random.choice(english_team)
+        profile = random.choice(keeper_profile) + " and plays for " + random.choice(english_team) + " and is valued at £35m"
     if position1 == "Defender" and nationality1 == "English":
-        profile = random.choice(defender_profile) + " and plays for " + random.choice(english_team)
+        profile = random.choice(defender_profile) + " and plays for " + random.choice(english_team) + " and is valued at £50m"
     if position1 == "Midfielder" and nationality1 == "English":
-        profile = random.choice(midfielder_profile) + " and plays for " + random.choice(english_team)
+        profile = random.choice(midfielder_profile) + " and plays for " + random.choice(english_team) + " and is valued at £65m"
     if position1 == "Striker" and nationality1 == "English": 
-        profile = random.choice(striker_profile) + " and plays for " + random.choice(english_team)
+        profile = random.choice(striker_profile) + " and plays for " + random.choice(english_team) + " and is valued at £80m"
 
     if position1 == "Goalkeeper" and nationality1 == "Spanish":
-        profile = random.choice(keeper_profile) + " and plays for " + random.choice(spanish_team)
+        profile = random.choice(keeper_profile) + " and plays for " + random.choice(spanish_team) + " and is valued at £50m"
     if position1 == "Defender" and nationality1 == "Spanish":
-        profile = random.choice(defender_profile) + " and plays for " + random.choice(spanish_team)
+        profile = random.choice(defender_profile) + " and plays for " + random.choice(spanish_team) + " and is valued at £30m"
     if position1 == "Midfielder" and nationality1 == "Spanish":
-        profile = random.choice(midfielder_profile) + " and plays for " + random.choice(spanish_team)
+        profile = random.choice(midfielder_profile) + " and plays for " + random.choice(spanish_team) + " and is valued at £45m"
     if position1 == "Striker" and nationality1 == "Spanish": 
-        profile = random.choice(striker_profile) + " and plays for " + random.choice(spanish_team)
+        profile = random.choice(striker_profile) + " and plays for " + random.choice(spanish_team) + " and is valued at £20m"
     
     if position1 == "Goalkeeper" and nationality1 == "French":
-        profile = random.choice(keeper_profile) + " and plays for " + random.choice(french_team)
+        profile = random.choice(keeper_profile) + " and plays for " + random.choice(french_team) + " and is valued at £20m"
     if position1 == "Defender" and nationality1 == "French":
-        profile = random.choice(defender_profile) + " and plays for " + random.choice(french_team)
+        profile = random.choice(defender_profile) + " and plays for " + random.choice(french_team) + " and is valued at £40m"
     if position1 == "Midfielder" and nationality1 == "French":
-        profile = random.choice(midfielder_profile) + " and plays for " + random.choice(french_team)
+        profile = random.choice(midfielder_profile) + " and plays for " + random.choice(french_team) + " and is valued at £85m"
     if position1 == "Striker" and nationality1 == "French": 
-        profile = random.choice(striker_profile) + " and plays for " + random.choice(french_team)
+        profile = random.choice(striker_profile) + " and plays for " + random.choice(french_team) + " and is valued at £67m"
     
     if position1 == "Goalkeeper" and nationality1 == "Italian":
-        profile = random.choice(keeper_profile) + " and plays for " + random.choice(italian_team)
+        profile = random.choice(keeper_profile) + " and plays for " + random.choice(italian_team) + " and is valued at £15m"
     if position1 == "Defender" and nationality1 == "Italian":
-        profile = random.choice(defender_profile) + " and plays for " + random.choice(italian_team)
+        profile = random.choice(defender_profile) + " and plays for " + random.choice(italian_team) + " and is valued at £65m"
     if position1 == "Midfielder" and nationality1 == "Italian":
-        profile = random.choice(midfielder_profile) + " and plays for " + random.choice(italian_team)
+        profile = random.choice(midfielder_profile) + " and plays for " + random.choice(italian_team) + " and is valued at £45m"
     if position1 == "Striker" and nationality1 == "Italian": 
-        profile = random.choice(striker_profile) + " and plays for " + random.choice(italian_team)
+        profile = random.choice(striker_profile) + " and plays for " + random.choice(italian_team) + " and is valued at £60m"
     
     if position1 == "Goalkeeper" and nationality1 == "German":
-        profile = random.choice(keeper_profile) + " and plays for " + random.choice(german_team)
+        profile = random.choice(keeper_profile) + " and plays for " + random.choice(german_team) + " and is valued at £80m"
     if position1 == "Defender" and nationality1 == "German":
-        profile = random.choice(defender_profile) + " and plays for " + random.choice(german_team)
+        profile = random.choice(defender_profile) + " and plays for " + random.choice(german_team) + " and is valued at £40m"
     if position1 == "Midfielder" and nationality1 == "German":
-        profile = random.choice(midfielder_profile) + " and plays for " + random.choice(german_team)
+        profile = random.choice(midfielder_profile) + " and plays for " + random.choice(german_team) + " and is valued at £50m"
     if position1 == "Striker" and nationality1 == "German": 
-        profile = random.choice(striker_profile) + " and plays for " + random.choice(german_team)
+        profile = random.choice(striker_profile) + " and plays for " + random.choice(german_team) + " and is valued at £90m"
     
     if position1 == "Goalkeeper" and nationality1 == "American":
-        profile = random.choice(keeper_profile) + " and plays for " + random.choice(american_team)
+        profile = random.choice(keeper_profile) + " and plays for " + random.choice(american_team) + " and is valued at £10m"
     if position1 == "Defender" and nationality1 == "American":
-        profile = random.choice(defender_profile) + " and plays for " + random.choice(american_team)
+        profile = random.choice(defender_profile) + " and plays for " + random.choice(american_team) + " and is valued at £15m"
     if position1 == "Midfielder" and nationality1 == "American":
-        profile = random.choice(midfielder_profile) + " and plays for " + random.choice(american_team)
+        profile = random.choice(midfielder_profile) + " and plays for " + random.choice(american_team) + " and is valued at £20m"
     if position1 == "Striker" and nationality1 == "American": 
-        profile = random.choice(striker_profile) + " and plays for " + random.choice(american_team)
+        profile = random.choice(striker_profile) + " and plays for " + random.choice(american_team) + " and is valued at £25m"
     
     if position1 == "Goalkeeper" and nationality1 == "Portuguese":
-        profile = random.choice(keeper_profile) + " and plays for " + random.choice(portuguese_team)
+        profile = random.choice(keeper_profile) + " and plays for " + random.choice(portuguese_team) + " and is valued at £20m"
     if position1 == "Defender" and nationality1 == "Portuguese":
-        profile = random.choice(defender_profile) + " and plays for " + random.choice(portuguese_team)
+        profile = random.choice(defender_profile) + " and plays for " + random.choice(portuguese_team) + " and is valued at £30m"
     if position1 == "Midfielder" and nationality1 == "Portuguese":
-        profile = random.choice(midfielder_profile) + " and plays for " + random.choice(portuguese_team)
+        profile = random.choice(midfielder_profile) + " and plays for " + random.choice(portuguese_team) + " and is valued at £40m"
     if position1 == "Striker" and nationality1 == "Portuguese": 
-        profile = random.choice(striker_profile) + " and plays for " + random.choice(portuguese_team)
+        profile = random.choice(striker_profile) + " and plays for " + random.choice(portuguese_team) + " and is valued at £50m"
     return Response(profile, mimetype="text/plain")
