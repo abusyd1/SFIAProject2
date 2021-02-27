@@ -4,6 +4,9 @@ services:
     container_name: "generator_service1"
     image: abusyd1/service1:latest
     build: ./service1
+    environment:
+      DB_URI: ${DB_URI}
+      SEC_KEY: ${SEC_KEY}      
     ports:
     - target: 5000
       published: 5000
