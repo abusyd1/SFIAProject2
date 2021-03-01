@@ -1,0 +1,38 @@
+ - name: Install the required packages
+    apt:
+      pkg:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - software-properties-common
+      - python3
+      - python3-pip
+      - python-setuptools
+      update_cache: true
+  - name: Get the docker APT key
+    ansible.builtin.apt_key:
+      url: https://download.docker.com/linux/ubuntu/gpg
+      state: present
+  - name: Add docker APT repository
+    ansible.builtin.apt_repository:
+      repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable
+  - name: Install docker using APT
+    apt:
+     update_cache: true
+     name: docker-ce
+     state: latest
+  - name: Start docker
+    service:
+      name: docker
+      state: started
+  - name: Install Docker pip package
+    pip:
+      name: docker
+      executable: pip3
+  - name: Add your user to the docker group
+    user: 
+      name: abusayeed_cb
+      groups: docker
+      append: yes
+  - name: restart the shell connection to ensure the added user can execute docker commands
+    meta: reset_connection
