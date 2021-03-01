@@ -8,3 +8,4 @@ pytest==6.1.0
 pytest-cov==2.10.1
 Flask-testing==0.8.0
 Flask_wtf==0.8.0
+gunicorn==20.0.4

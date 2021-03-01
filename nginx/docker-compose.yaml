@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+ nginx:
+    image: nginx:latest
+    ports:
+    - target: 80
+      published: 80
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: ./nginx.conf
+      target: /etc/nginx/nginx.conf

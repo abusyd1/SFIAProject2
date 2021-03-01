@@ -1,56 +1,44 @@
 version: '3.7'
 services:
   service1:
-    container_name: "generator_service1"
-    image: abusyd1/service1:latest
+    image: abusyd1/service1:v2
     build: ./service1
-    environment:
-      DB_URI: ${DB_URI}  
-      SEC_KEY: ${SEC_KEY}    
     ports:
     - target: 5000
       published: 5000
       protocol: tcp
-    depends_on: 
-    - service2 
-    - service3 
-    - service4
+    environment:
+      DB_URI: ${DB_URI}
+      SEC_KEY: ${SEC_KEY}      
     deploy:
-      replicas: 3
+      replicas: 4
   service2:
-    container_name: "generator_service2"
-    image: abusyd1/service2:latest
+    image: abusyd1/service2:v2
     build: ./service2
-    ports:
+    ports: 
     - target: 5001
       published: 5001
       protocol: tcp
-
     deploy:
-      replicas: 3
+      replicas: 4
   service3:
-    container_name: "generator_service3"
-    image: abusyd1/service3:latest
+    image: abusyd1/service3:v2
     build: ./service3
-    ports: 
+    ports:
     - target: 5002
       published: 5002
       protocol: tcp
     deploy:
-      replicas: 3
+      replicas: 4
   service4:
-    container_name: "generator_service4"
-    image: abusyd1/service4:latest
+    image: abusyd1/service4:v2
     build: ./service4
     ports:
     - target: 5003
       published: 5003
       protocol: tcp
-    depends_on: 
-    - service2
-    - service3
     deploy:
-      replicas: 3
+      replicas: 4
   nginx:
     image: nginx:latest
     ports:
@@ -61,5 +49,3 @@ services:
     - type: bind
       source: ./nginx/nginx.conf
       target: /etc/nginx/nginx.conf
-    depends_on: 
-    - service1   
