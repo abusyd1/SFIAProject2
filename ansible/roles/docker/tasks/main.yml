@@ -31,7 +31,7 @@
     executable: pip3
 - name: Add your user to the docker group
   user: 
-    name: d_walker0357
+    name: jenkins
     groups: docker
     append: yes
 - name: restart the shell connection to ensure the added user can execute docker commands
