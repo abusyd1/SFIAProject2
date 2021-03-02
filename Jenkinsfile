@@ -3,6 +3,7 @@ pipeline {
     stages{
         stage("Test-Application"){
             steps{
+                chmod+x test-application.sh
                 sh './jenkins/test-application.sh'
             }
         }
