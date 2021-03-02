@@ -7,19 +7,19 @@ pipeline {
                 sh '''
                 cd ./service1
                 pip3 install -r requirements.txt
-                pytest --cov=app --cov-report=term-missing
+                pytest --cov=application --cov-report=term-missing
                 cd ..
                 # test service2
                 cd ./service2
-                pytest --cov=app --cov-report=term-missing
+                pytest --cov=application --cov-report=term-missing
                 cd ..
                 # test service3
                 cd ./service3
-                pytest --cov=app --cov-report=term-missing
+                pytest --cov=application --cov-report=term-missing
                 cd ..
                 # test service4
                 cd ./service4
-                pytest --cov=app --cov-report=term-missing
+                pytest --cov=application --cov-report=term-missing
                 cd ..
                 '''
             }
