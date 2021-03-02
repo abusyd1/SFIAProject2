@@ -1,27 +1,10 @@
 pipeline {
     agent any 
     stages{
-
-        stage('Test'){
+        stage("Test-Application"){
             steps{
-                sh '''
-                cd ./service1
-                pip3 install -r requirements.txt
-                pytest --cov=application --cov-report=term-missing
-                cd ..
-                # test service2
-                cd ./service2
-                pytest --cov=application --cov-report=term-missing
-                cd ..
-                # test service3
-                cd ./service3
-                pytest --cov=application --cov-report=term-missing
-                cd ..
-                # test service4
-                cd ./service4
-                pytest --cov=application --cov-report=term-missing
-                cd ..
-                '''
+                sh "chmod +x -R ${env.WORKSPACE}"
+                sh './jenkins/test-application.sh'
             }
         }
         stage('Build'){
