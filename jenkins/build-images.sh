@@ -1,5 +1,6 @@
 # SSH into manager
 #! /bin/bash
+sh 'ssh -o StrictHostKeyChecking=no root@10.138.0.11'
 ssh 10.138.0.11 << EOF 
 # Remove any previous locally built images 
 docker-compose down --rmi local
