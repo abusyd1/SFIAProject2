@@ -3,7 +3,6 @@ pipeline {
     stages{
         stage("Test-Application"){
             steps{
-                sh "chmod +x -R ${env.WORKSPACE}"
                 sh './jenkins/test-application.sh'
             }
         }
@@ -15,7 +14,6 @@ pipeline {
         stage("Ansible"){
             steps{
                 sh '''
-                    export ANSIBLE_HOST_KEY_CHECKING=False 
                     cd ansible
                     chmod 666 inventory.yaml playbook.yaml
                     ls -la
