@@ -1,3 +1,6 @@
+#set environment variables
+export DB_URI="mysql+pymysql://root:root@34.105.84.9/flask_db"
+export SEC_KEY="jdfhkhfvk"
 # Remove any previous locally built images 
 docker-compose down --rmi local
 # build the images for the services from the docker-compose.yaml
