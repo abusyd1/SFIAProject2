@@ -86,6 +86,23 @@ Below can be seen the final Risk Assessment for this project:
 
 <img width="577" alt="risk2" src="https://user-images.githubusercontent.com/77271496/109601971-bb31cf00-7b17-11eb-8e55-5cb3086a27e4.png">
 
+## Front-End
+As mentioned earlier, I was able to get the app running manually with docker stack commands. Below can be seen the Front-Ends of versions 1 and 2, as well as the docker stack service logs to show replicas working on each node.
+
+### Version1
+
+<img width="900" alt="v1" src="https://user-images.githubusercontent.com/77271496/109603408-a6eed180-7b19-11eb-9ee1-f31013e65104.png">
+
+This is the Front-End for version1, quite simplistic with a very basic display. The user would have to refresh to get new results.
+
+<img width="696" alt="services1" src="https://user-images.githubusercontent.com/77271496/109603632-f92ff280-7b19-11eb-856c-68b4cf55af79.png">
+
+This is the docker stack services logs for version1. As can be seen, all replicas are up and running, allowing the app to work on port 80.
+
+### Version2
+
+
+
 
 
 
