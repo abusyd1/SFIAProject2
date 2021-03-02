@@ -2,5 +2,5 @@
   docker_swarm:
     state: join
     advertise_addr: worker
-    join_token: "{{ hostvars['10.138.0.19']['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
+    join_token: "{{ hostvars['10.138.0.11']['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
     remote_addrs: [ 'swarm-master' ]
