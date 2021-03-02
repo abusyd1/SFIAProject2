@@ -1,0 +1,3 @@
+Flask
+requests
+gunicorn==20.0.4

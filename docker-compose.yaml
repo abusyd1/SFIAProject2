@@ -1,0 +1,51 @@
+version: '3.7'
+services:
+  service1:
+    image: abusyd1/service1:v1
+    build: ./service1
+    ports:
+    - target: 5000
+      published: 5000
+      protocol: tcp
+    environment:
+      DB_URI: ${DB_URI}
+      SEC_KEY: ${SEC_KEY}      
+    deploy:
+      replicas: 4
+  service2:
+    image: abusyd1/service2:v1
+    build: ./service2
+    ports: 
+    - target: 5001
+      published: 5001
+      protocol: tcp
+    deploy:
+      replicas: 4
+  service3:
+    image: abusyd1/service3:v1
+    build: ./service3
+    ports:
+    - target: 5002
+      published: 5002
+      protocol: tcp
+    deploy:
+      replicas: 4
+  service4:
+    image: abusyd1/service4:v1
+    build: ./service4
+    ports:
+    - target: 5003
+      published: 5003
+      protocol: tcp
+    deploy:
+      replicas: 4
+  nginx:
+    image: nginx:latest
+    ports:
+    - target: 80
+      published: 80
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: ./nginx/nginx.conf
+      target: /etc/nginx/nginx.conf
