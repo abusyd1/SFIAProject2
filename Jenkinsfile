@@ -18,8 +18,8 @@ pipeline {
         
         stage("Build-Images"){
             steps{
-                sh export DB_URI="mysql+pymysql://root:root@34.105.84.9/flask_db"
-                   export SEC_KEY="jdfhkhfvk"
+                sh "export DB_URI="mysql+pymysql://root:root@34.105.84.9/flask_db""
+                   "export SEC_KEY="jdfhkhfvk""
                 sh './jenkins/build-images.sh'
             }
         }
