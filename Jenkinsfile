@@ -15,6 +15,7 @@ pipeline {
         stage("Ansible"){
             steps{
                 sh '''
+                    
                     cd ansible
                     chmod 666 inventory.yaml playbook.yaml
                     ls -la
