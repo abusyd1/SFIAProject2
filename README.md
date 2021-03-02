@@ -4,7 +4,7 @@
 ## Project Brief
 According to the project specification, the objective of this project is to create a simple web application, made up of 4 services:
 * Service 1 - Communicates with other 3 services, renders Jinja2 templates to interact with application, persists data in an SQL database
-* Servies 2 & 3 - Generate random objects
+* Services 2 & 3 - Generate random objects
 * Service 4 - Generates another object, based upon the results of Services 2 & 3
 The application will also encapsulate the following:
 * Asana Board
