@@ -101,6 +101,27 @@ This is the docker stack services logs for version1. As can be seen, all replica
 
 ### Version2
 
+<img width="952" alt="v2" src="https://user-images.githubusercontent.com/77271496/109604054-c5a19800-7b1a-11eb-9ad9-66f2ebd1f408.png">
+
+This is the Front-End for version2, where I have made it a little more appealing to the user. Here, I have also implemented a button feature to generate a new player rather than refreshing, as well as generating a new monetary value for the player in service4, which was not seen in the previous version.
+
+<img width="753" alt="v2 logs" src="https://user-images.githubusercontent.com/77271496/109604134-e2d66680-7b1a-11eb-8eb8-9cd9114b6372.png">
+
+This is the docker stack services logs for version2. As can be seen, all replicas are up and running, allowing the app to work on port 80.
+
+## Evaluation
+### Issues
+There were a number of issues with this project, which ultimately led to not completing it before the deadline. This was due to not finishing the MVP on time, as full understanding of each and every aspect of the software used within this app was not grasped early enough, to allow sufficient time to complete the project. These issues have been mentioned earlier and I believe with some extra time, I could've resolved these myself. However, moving on, I aim to complete the project in my own time to fully demonstrate that I have understood how everything works. Between learning all the material and constructing the project, there was only a matter of days to complete it. However, in future, I hope to avoid any similar problems from occuring by starting projects early, even if knowledge is not sufficiet at the time, I will start constructing whilst learning, and fix any issues as I go along.  
+
+### Possible Improvements
+Besides the Jenkins side, I would like to perhaps add a feature in the app where users can see previously generated players. In addition, giving the user an option to choose a nationality and position would be a viable option, which could potentially make services 2 and 3 dependent on eachother.
+
+## Appendix
+### Contributors
+Mohammed Abu Sayeed
+### Acknowledgements
+I would like to thanks all trainers for their teaching and support throughout, including Jay Grindrod, Ben Hesketh, Nathan Forrester, Peter Rhodes and Raji Kolluru. I would also like to thank fellow cohort members for their help as well as the StackOverflow community.
+
 
 
 
